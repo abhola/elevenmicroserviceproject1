@@ -1,7 +1,0 @@
-backend.tf
-provider.tf
-variable.tf
-vpc.tf
-iam-roleeks.tf
-main.tf
-backend.tf
