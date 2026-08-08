@@ -28,7 +28,7 @@ data "aws_subnet" "subnet-1" {
 }
 
 data "aws_subnet" "subnet-2" {
-  id = "subnet-0c85f020c2ba40fe5"
+  id = "subnet-041bb441750512ed2"
 }
 
 
