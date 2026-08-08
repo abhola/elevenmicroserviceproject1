@@ -44,18 +44,23 @@ resource "aws_iam_role_policy" "terraform_s3_backend" {
 EOF
 }
 
-######## Terrafom plan job fail because that role currently doesn't have permission to read VPC information. we used data "aws_vpc" "main" {"
+######## Terrafom plan job fail because that role currently doesn't have permission to read VPC information. we used data "aws_vpc" "main" {" ###
+resource "aws_iam_role_policy" "jumphost_ec2_read" {
+  name = "JumphostEC2ReadAccess"
+  role = "Jumphost-iam-role1"
 
+  policy = <<EOF
 {
   "Version": "2012-10-17",
-   "Statement": [
-     {
+  "Statement": [
+    {
       "Effect": "Allow",
       "Action": [
         "ec2:DescribeVpcs"
-     ],
+      ],
       "Resource": "*"
     }
   ]
 }
- 
+EOF
+}
