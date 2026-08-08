@@ -29,4 +29,4 @@ data "aws_security_group" "selected" {
     name   = "tag:Name"
     values = ["Jumphost-sg"]
   }
-}git 
+} 
