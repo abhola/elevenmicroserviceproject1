@@ -7,7 +7,7 @@ data "aws_vpc" "main" {
   }
 }
 
-data "aws_subnet" "subnet-1" {
+/*ata "aws_subnet" "subnet-1" {
   vpc_id = "subnet-0e0cbce33641830ac"
   filter {
     name   = "tag:Name"
@@ -21,7 +21,18 @@ data "aws_subnet" "subnet-2" {
     name   = "tag:Name"
     values = ["Public-subnet2"]
   }
+} */
+
+data "aws_subnet" "subnet-1" {
+  id = "subnet-0e0cbce33641830ac"
 }
+
+data "aws_subnet" "subnet-2" {
+  id = "subnet-0c85f020c2ba40fe5"
+}
+
+
+
 
 data "aws_security_group" "selected" {
   vpc_id = data.aws_vpc.main.id
