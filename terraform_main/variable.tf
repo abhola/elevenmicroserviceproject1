@@ -36,3 +36,34 @@ variable "private-subnet-2" {
   default = "Private-subnet2"
 
 }
+
+variable "ami_id" {
+ description = " AMi Id "
+ type = string 
+ default = "ami-0b6d9d3d33ba97d99"
+
+}
+
+variable "instance_type" {
+  description = "instance name "
+  type = string 
+  default = "t2.large"
+
+} 
+variable "key_name" {
+  description = "EC2 key pair name"
+  type        = string
+  default     = "bhola"
+}
+
+variable "iam-role" {
+  description = "IAM Role for the Jumphost Server"
+  type = string
+  default = "Jumphost-iam-role1"
+}
+
+variable "sg-name" {
+  description = "Security Group for our Jumphost server"
+  type = string
+  default = "Jumphost-sg"
+}
