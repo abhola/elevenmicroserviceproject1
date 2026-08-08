@@ -8,7 +8,7 @@ data "aws_vpc" "main" {
 }
 
 data "aws_subnet" "subnet-1" {
-  vpc_id = data.aws_vpc.main.id
+  vpc_id = "subnet-0e0cbce33641830ac"
   filter {
     name   = "tag:Name"
     values = ["Public-Subnet1"]
@@ -16,7 +16,7 @@ data "aws_subnet" "subnet-1" {
 }
 
 data "aws_subnet" "subnet-2" {
-  vpc_id = data.aws_vpc.main.id
+  vpc_id = "subnet-0c85f020c2ba40fe5"
   filter {
     name   = "tag:Name"
     values = ["Public-subnet2"]
