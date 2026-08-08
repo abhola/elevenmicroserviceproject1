@@ -3,7 +3,7 @@
 # ----------------------------
 data "aws_vpc" "main" {
   tags = {
-    Name = "Jumphost-vpc"
+    Name = "Jumphost.vpc"
   }
 }
 
