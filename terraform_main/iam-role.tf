@@ -43,3 +43,19 @@ resource "aws_iam_role_policy" "terraform_s3_backend" {
 }
 EOF
 }
+
+######## Terrafom plan job fail because that role currently doesn't have permission to read VPC information. we used data "aws_vpc" "main" {"
+
+{
+  "Version": "2012-10-17",
+   "Statement": [
+     {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeVpcs"
+     ],
+      "Resource": "*"
+    }
+  ]
+}
+ 
