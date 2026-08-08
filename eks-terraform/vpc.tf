@@ -7,7 +7,7 @@ data "aws_vpc" "main" {
   }
 }
 
-data "aws_subnet" "subnet1" {
+data "aws_subnet" "subnet-1" {
   vpc_id = data.aws_vpc.main.id
   filter {
     name   = "tag:Name"
@@ -15,7 +15,7 @@ data "aws_subnet" "subnet1" {
   }
 }
 
-data "aws_subnet" "subnet2" {
+data "aws_subnet" "subnet-2" {
   vpc_id = data.aws_vpc.main.id
   filter {
     name   = "tag:Name"
@@ -29,4 +29,4 @@ data "aws_security_group" "selected" {
     name   = "tag:Name"
     values = ["Jumphost-sg"]
   }
-}
+}git 
