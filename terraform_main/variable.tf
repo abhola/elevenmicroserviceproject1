@@ -53,7 +53,7 @@ variable "instance_type" {
 variable "key_name" {
   description = "EC2 key pair name"
   type        = string
-  default     = "bhola"
+  default     = "virginia"
 }
 
 variable "iam-role" {
