@@ -50,7 +50,7 @@ pipeline {
         stage('Update Deployment file') {
             steps {
                 dir('kubernetes-files') {
-                    withCredentials([string(credentialsId: 'github', variable: 'git_token')]) {
+                    withCredentials([string(credentialsId: 'my-git-pattoken', variable: 'git_token')]) {
                         sh '''
                             git config user.email "${GIT_EMAIL}"
                             git config user.name "${GIT_USER_NAME}"
