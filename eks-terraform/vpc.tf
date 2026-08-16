@@ -11,7 +11,7 @@ data "aws_subnet" "subnet-1" {
   vpc_id = data.aws_vpc.main.id
   filter {
     name   = "tag:Name"
-    values = ["Public-Subnet-1"]
+    values = ["Public-subnet1"]
   }
 }
 
@@ -19,7 +19,7 @@ data "aws_subnet" "subnet-2" {
   vpc_id = data.aws_vpc.main.id
   filter {
     name   = "tag:Name"
-    values = ["Public-subnet-2"]
+    values = ["Public-subnet2"]
   }
 }
 
