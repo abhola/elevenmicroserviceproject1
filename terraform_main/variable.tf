@@ -40,7 +40,7 @@ variable "private-subnet-2" {
 variable "ami_id" {
  description = " AMi Id "
  type = string 
- default = "ami-0b6d9d3d33ba97d99"
+ default = "ami-0bdc7d025135d7b49"
 
 }
 
