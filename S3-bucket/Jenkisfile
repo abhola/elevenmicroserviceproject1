@@ -24,7 +24,7 @@ pipeline {
 
         stage('Terraform init') {
             steps {
-                dir('eks-terraform') {
+                dir('S3-bucket') {
                     sh 'terraform init --reconfigure'
                 }
             }
