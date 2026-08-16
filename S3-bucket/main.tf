@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket1" {
-  bucket = "aluruarumullaa1985"
+  bucket = "aluruarumullaa19"
 
   tags = {
     Name        = "My bucket1"
@@ -15,7 +15,7 @@ resource "aws_s3_bucket_versioning" "bucket1_versioning" {
 
 
 resource "aws_s3_bucket" "bucket2" {
-  bucket = "aluruarumullaa2985"
+  bucket = "aluruarumullaa20"
 
   tags = {
     Name        = "My bucket2"
