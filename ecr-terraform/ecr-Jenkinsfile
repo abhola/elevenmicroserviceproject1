@@ -51,7 +51,7 @@ pipeline {
                 expression { params.ACTION == 'apply' }
             }
             steps {
-                dir('eks-terraform') {
+                dir('ecr-terraform') {
                     sh 'terraform apply -auto-approve'
                 }
             }
