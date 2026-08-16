@@ -49,7 +49,7 @@ resource "aws_iam_role" "worker" {
   })
 }
 resource "aws_iam_policy" "autoscaler" {
-  name = "yaswanth-eks-autoscaler-policy1"
+  name = "ankur-eks-autoscaler-policy1"
   policy = jsonencode({
     Version = "2012-10-17",
     Statement = [{
@@ -100,6 +100,6 @@ resource "aws_iam_role_policy_attachment" "autoscaler" {
 
 resource "aws_iam_instance_profile" "worker" {
   depends_on = [aws_iam_role.worker]
-  name       = "yaswanth-eks-worker-profile1"
+  name       = "ankur-eks-worker-profile1"
   role       = aws_iam_role.worker.name
 }

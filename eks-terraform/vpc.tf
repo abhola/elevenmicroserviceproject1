@@ -7,6 +7,24 @@ data "aws_vpc" "main" {
   }
 }
 
+data "aws_subnet" "subnet-1" {
+  vpc_id = data.aws_vpc.main.id
+  filter {
+    name   = "tag:Name"
+    values = ["Public-Subnet-1"]
+  }
+}
+
+data "aws_subnet" "subnet-2" {
+  vpc_id = data.aws_vpc.main.id
+  filter {
+    name   = "tag:Name"
+    values = ["Public-subnet-2"]
+  }
+}
+
+
+
 /*ata "aws_subnet" "subnet-1" {
   vpc_id = "subnet-0e0cbce33641830ac"
   filter {
@@ -21,7 +39,7 @@ data "aws_subnet" "subnet-2" {
     name   = "tag:Name"
     values = ["Public-subnet2"]
   }
-} */
+} 
 
 data "aws_subnet" "subnet-1" {
   id = "subnet-0e0cbce33641830ac"
@@ -29,7 +47,7 @@ data "aws_subnet" "subnet-1" {
 
 data "aws_subnet" "subnet-2" {
   id = "subnet-041bb441750512ed2"
-}
+}*/
 
 
 
